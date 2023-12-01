@@ -97,7 +97,7 @@ const Filter = () => {
                 </div>
                 {Object.keys(usersAddedByDate)
                     .reverse()
-                    .map((date) => (
+                    .map((date, index) => (
                         <>
                             <div className="flex gap-2 items-center mt-10 justify-between mb-5">
                                 <h3 className="text-2xl text-white font-bold poppins">
@@ -106,12 +106,12 @@ const Filter = () => {
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-2 md:gap-3 lg:gap-4" key={date}>
                                 {usersAddedByDate[date]
-                                    .filter((t) =>
+                                    .filter((t, index) =>
                                         filterStatus === null ? true : t.isChecked === filterStatus
                                     )
-                                    .map((t, index) => (
+                                    .map((t, _id) => (
                                         <div>
-                                            <div className="blur2 border py-3 px-4 rounded-md text-white" key={t.id}>
+                                            <div className="blur2 border py-3 px-4 rounded-md text-white" key={t._id}>
                                                 <h1 className="text-4xl">Ismi: {t.title}</h1>
                                                 <p className="text-xl">Qaysi sanaga: {t.description}</p>
                                                 <p>Qancha vaqtga: {t.time}</p>
