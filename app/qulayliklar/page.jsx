@@ -16,7 +16,7 @@ export default function page() {
         },
         {
             id: 2,
-            // icon: <FaRoad />,
+            icon: <TiPointOfInterestOutline />,
             description: 'Bu dastur yordamida har bir mijoz o`zi hohlagan paytda masofadan yagona o`zi to`lovni amalga oshirib stadionni band qila oladi.',
         },
         {

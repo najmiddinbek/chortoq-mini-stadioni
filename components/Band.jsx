@@ -109,9 +109,9 @@ const Filter = () => {
                                     .filter((t, index) =>
                                         filterStatus === null ? true : t.isChecked === filterStatus
                                     )
-                                    .map((t, _id) => (
+                                    .map((t) => (
                                         <div>
-                                            <div className="blur2 border py-3 px-4 rounded-md text-white" key={t._id}>
+                                            <div className="blur2 border py-3 px-4 rounded-md text-white" key={t.id}>
                                                 <h1 className="text-4xl">Ismi: {t.title}</h1>
                                                 <p className="text-xl">Qaysi sanaga: {t.description}</p>
                                                 <p>Qancha vaqtga: {t.time}</p>
